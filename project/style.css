@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #f5f5f5;
+    line-height: 1.8;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.letter-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: slideDown 1s ease-out 0.3s both;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.date-stamp {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #a8dadc;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: #f1faee;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 20px rgba(168, 218, 220, 0.3);
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #a8dadc;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.image-section {
+    margin: 50px 0;
+    animation: fadeIn 1.5s ease-out 0.6s both;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(168, 218, 220, 0.3);
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #a8dadc;
+    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.letter-content {
+    animation: fadeIn 1.5s ease-out 0.9s both;
+}
+
+.letter-content p {
+    margin-bottom: 30px;
+    font-size: 17px;
+    color: #e8e8e8;
+    text-align: justify;
+    line-height: 2;
+}
+
+.opening {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #a8dadc;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.image-break {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.inline-image {
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.inline-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(168, 218, 220, 0.3);
+}
+
+.quote-section {
+    margin: 60px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(168, 218, 220, 0.1), rgba(241, 250, 238, 0.05));
+    border-left: 4px solid #a8dadc;
+    border-radius: 10px;
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 100px;
+    color: rgba(168, 218, 220, 0.3);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+}
+
+.quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #f1faee;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.memory-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.memory-card:hover img {
+    box-shadow: 0 15px 40px rgba(168, 218, 220, 0.4);
+}
+
+.memory-card p {
+    font-size: 14px;
+    color: #a8dadc;
+    font-style: italic;
+    margin: 0;
+}
+
+.closing {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #a8dadc;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: #f1faee;
+    margin-top: 40px;
+    text-align: right;
+}
+
+.signature-line {
+    display: block;
+    margin-top: 10px;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.final-image {
+    margin-top: 60px;
+    position: relative;
+    text-align: center;
+}
+
+.closing-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+}
+
+.final-message {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #f1faee;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8),
+                 0 0 30px rgba(168, 218, 220, 0.6);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .letter-wrapper {
+        padding: 40px 30px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .hero-image,
+    .inline-image,
+    .closing-image {
+        height: 250px;
+    }
+
+    .letter-content p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .quote-text {
+        font-size: 20px;
+    }
+
+    .quote-section {
+        padding: 30px 20px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .final-message {
+        font-size: 20px;
+        bottom: 20px;
+    }
+
+    .signature {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .letter-wrapper {
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .letter-content p {
+        font-size: 15px;
+    }
+}
